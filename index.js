@@ -1,33 +1,13 @@
-
-
 const keepAlive = require("./server")
-
 const Discord = require("discord.js")
-
-
-
-
 const client = new Discord.Client()
-
-
-
-
-
-
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`)
   
 })
 
-
-
-
 var players = {}
-
-
-
-
 
 client.on("message", msg => {
   if(msg.author.bot) return
@@ -44,8 +24,6 @@ client.on("message", msg => {
   
   msg.channel.send("Commands: !+enroll/start/vote/restart")
 })
-
-
 
 
 keepAlive()
